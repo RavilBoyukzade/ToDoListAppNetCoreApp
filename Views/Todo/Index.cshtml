@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ToDo_list.Models.TodoItem>
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h4 fw-bold">Tasks</h1>
+    <a asp-action="Create" class="btn btn-primary">
+        <i class="bi bi-plus"></i> New Task
+    </a>
+</div>
+
+@if (Model.Any())
+{
+    <div class="todo-card">
+        @foreach (var item in Model)
+        {
+            <div class="todo-item d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="mb-1 @(item.IsCompleted ? "text-decoration-line-through text-muted" : "")">@item.Title</h6>
+                    @if (!string.IsNullOrEmpty(item.Description))
+                    {
+                        <p class="small text-muted mb-0">@item.Description</p>
+                    }
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="status-badge @(item.IsCompleted ? "bg-success bg-opacity-10 text-success" : "bg-warning bg-opacity-10 text-warning") me-2">
+                        @(item.IsCompleted ? "Completed" : "Pending")
+                    </span>
+                    <div class="action-buttons">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary me-1">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="todo-card empty-state">
+        <h5>No Tasks Yet</h5>
+        <p class="text-muted">Add a new task to get started</p>
+        <a asp-action="Create" class="btn btn-primary mt-2">Create Task</a>
+    </div>
+}
