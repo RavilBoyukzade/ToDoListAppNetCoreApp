@@ -1,7 +1,7 @@
 # ToDoListAppNetCoreApp
 # To-Do List Application
 
-![App Screenshot](App screenshot.png) <!-- Добавьте скриншот позже -->
+![App Screenshot](Appscreenshot.png) <!-- Добавьте скриншот позже -->
 
 Простое и элегантное приложение для управления задачами в стиле macOS/iOS, созданное на ASP.NET Core MVC.
 
@@ -32,4 +32,4 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/RavilBoyukzade/ToDoListAppNetCoreApp
+[git clone https://github.com/RavilBoyukzade/ToDoListAppNetCoreApp](https://github.com/RavilBoyukzade/ToDoListAppNetCoreApp.git)
