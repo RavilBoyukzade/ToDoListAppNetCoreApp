@@ -1,7 +1,7 @@
 # ToDoListAppNetCoreApp
 # To-Do List Application
 
-![App Screenshot](screenshot.png) <!-- Добавьте скриншот позже -->
+![App Screenshot](App screenshot.png) <!-- Добавьте скриншот позже -->
 
 Простое и элегантное приложение для управления задачами в стиле macOS/iOS, созданное на ASP.NET Core MVC.
 
