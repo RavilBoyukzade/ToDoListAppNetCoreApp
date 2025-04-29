@@ -166,3 +166,4 @@
 /Users/ravilboyukzade/RiderProjects/ToDo list/ToDo list/obj/Debug/net8.0/ToDo list.pdb
 /Users/ravilboyukzade/RiderProjects/ToDo list/ToDo list/obj/Debug/net8.0/ToDo list.genruntimeconfig.cache
 /Users/ravilboyukzade/RiderProjects/ToDo list/ToDo list/obj/Debug/net8.0/ref/ToDo list.dll
+/Users/ravilboyukzade/RiderProjects/ToDo list/ToDo list/obj/Debug/net8.0/ToDo list.sourcelink.json

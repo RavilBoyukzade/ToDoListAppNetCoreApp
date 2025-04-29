@@ -28,6 +28,7 @@
       <_ContentIncludedByDefault Remove="Pages\Todo\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\Todo\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Pages\Todo\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\StickyWall\Index.cshtml" />
     </ItemGroup>
 
 </Project>

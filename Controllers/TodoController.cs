@@ -13,7 +13,21 @@ namespace ToDo_list.Controllers
         {
             _context = context;
         }
+        public IActionResult Upcoming()
+        {
+            var items = _context.TodoItems
+                .Where(t => !t.IsCompleted && t.CreatedDate > DateTime.Now)
+                .ToList();
+            return View("Index", items);
+        }
 
+        public IActionResult Today()
+        {
+            var items = _context.TodoItems
+                .Where(t => !t.IsCompleted && t.CreatedDate.Date == DateTime.Today)
+                .ToList();
+            return View("Index", items);
+        }
         // GET: Todo
         public async Task<IActionResult> Index()
         {

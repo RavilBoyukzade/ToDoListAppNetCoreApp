@@ -1,0 +1,29 @@
+@model ToDo_list.Models.StickyWallViewModel
+
+@{
+    ViewData["Title"] = "Sticky Wall";
+}
+
+<div class="sticky-wall">
+    @foreach (var sect in Model.Sections)
+    {
+        <div class="sticky-note">
+            <h3>@sect.Title</h3>
+
+            @if (sect.Items != null && sect.Items.Any())
+            {
+                <ul>
+                    @foreach (var item in sect.Items)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            }
+
+            @if (!string.IsNullOrEmpty(sect.Content))
+            {
+                <p>@sect.Content</p>
+            }
+        </div>
+    }
+</div>
